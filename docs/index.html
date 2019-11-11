@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css" />
+    <title>My travel</title>
+</head>
+<body>
+    <div id="app">
+        <div class="TabOfChoice" >
+            <table border="1">
+                <caption><em>All the price are in dollar</em></caption>
+                <thead>
+                    <tr>
+                        <th>TravelId</th>
+                        <th>Destination Name</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div class="RegForm">
+            <fieldset>
+                <legend>Details about the travel</legend>
+            <form>
+                <p>
+                    <label >Name:</label>
+                    <input type="text" required>
+                </p>
+                <p>
+                    <label>PersonnalID:</label>
+                    <input type="number" required>
+                </p>
+                <p>
+                    <label >travelID:</label>
+                    <input type="number" required>
+                </p>
+                <p>
+                    <label>Passengers:</label>
+                    <input type="number" required>
+                </p>
+                <p>
+                    <button type="button" onclick="send()" id="bouton">send</button>
+                    <!-- <img src="https://www.stickpng.com/assets/images/586383c67d90850fc3ce2914.png" id="submitImg" onclick="send()"> -->
+                </p>
+            </form>
+            </fieldset>
+        </div>
+        <div class="TabOfReg">
+            <table border="1">
+                <caption><em>Tab of all the orders</em></caption>
+                <thead>
+                    <tr>
+                        <th>Total</th>
+                        <th>Passagers</th>
+                        <th>Travel Name</th>
+                        <th>PersonnalID</th>
+                        <th>Name</th>
+                        <th>Code</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div class="RegSearchByName">
+            <fieldset>
+                <legend>Search by name</legend>
+                <p>
+                    <label >enter the name:</label>
+                    <input type="text" id="inputSearchName">
+                    <button onclick="search('inputSearchName','profitCustommer', '.RegSearchByName tbody')">find</button>
+                </p>
+                <p>
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>Total</th>
+                                <th>Passagers</th>
+                                <th>Travel Name</th>
+                                <th>PersonnalID</th>
+                                <th>name</th>
+                                <th>Code</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </p>
+                <hr>
+                <span>Total amount per custommer:<span id="profitCustommer"></span></span>
+                <hr>
+            </fieldset>
+        </div>
+        <div class="RegSearchByCountry">
+                <fieldset>
+                        <legend>Search by country</legend>
+                        <p>
+                            <label >enter the name of the country:</label>
+                                <select id="city" onchange="search('city', 'profitCountry', '.RegSearchByCountry tbody')">
+                                    <option value="Marseille">Marseille</option>
+                                    <option value="Rome">Rome</option>
+                                    <option value="Prague">Prague</option>
+                                    <option value="Manchester">Manchester</option>
+                                    <option value="New-York">New-York</option>
+                                    <option value="Pekin">Pekin</option>
+                                </select>
+                        </p>
+                        <p>
+                            <table border="1">
+                                <thead>
+                                    <tr>
+                                        <th>Total</th>
+                                        <th>Passagers</th>
+                                        <th>Travel Name</th>
+                                        <th>PersonnalID</th>
+                                        <th>name</th>
+                                        <th>Code</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </p>
+                        <hr>
+                        <span>Total amount per country:<span id="profitCountry"></span></span>
+                        <hr>
+                    </fieldset>
+        </div>
+        <div class="addDestination">
+                <fieldset>
+                        <legend>Add a new destination</legend>
+                    <form>
+                        <p>
+                            <label>Destination:</label>
+                            <input type="text" required>
+                        </p>
+                        <p>
+                            <label >Price:</label>
+                            <input type="number" required>
+                        </p>
+                        <p>
+                            <button type="button" onclick="addDest()" id="bouton">send</button>
+                        </p>
+                    </form>
+        </div>
+    </div>
+
+    <script src="javascript.js"></script>
+</body>
+</html>

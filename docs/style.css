@@ -1,0 +1,65 @@
+div > div{
+    height: 500px;
+    width: 500px;
+    -ms-flex-wrap: wrap;
+}
+
+
+#app
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.TabOfChoice
+{
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin: 10px;
+}
+
+td
+{
+    width: 80%;
+    height: 10px 
+}
+.TabOfChoice > table
+{
+    width: 80%;
+    height: 300px;
+}
+
+caption
+{
+    caption-side: bottom;
+    margin-top: 10px;
+}
+
+
+.RegForm
+{
+}
+.RegForm form
+{
+    display: table;
+}
+.RegForm p, .addDestination p
+{
+    display: table-row;
+    line-height: 1.6;
+}
+.RegForm label, .RegForm input, .addDestination label, .addDestination input
+{
+    display: table-cell;
+}
+#bouton
+{
+    margin-left: 250%;
+    margin-top: 10%;
+    height: 30px;
+    width: 50px;
+}
